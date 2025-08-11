@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "773684026988",
+    "project_id": "login-with-firebase-auth-b3a72",
+    "storage_bucket": "login-with-firebase-auth-b3a72.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773684026988:android:22ad67568c8548d068c249",
+        "android_client_info": {
+          "package_name": "com.blannonnetwork.loginwithfirebaseauth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "${{secrets.GOOGLE_API_KEY}}"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
