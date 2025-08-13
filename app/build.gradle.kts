@@ -85,7 +85,9 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.lifecycle.runtime.ktx.v292)
     implementation(libs.firebase.auth.ktx)
+    implementation(libs.play.services.auth)
     implementation(libs.dotlottie.android)
 
     implementation(libs.androidx.material.icons.extended)
+
 }

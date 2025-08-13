@@ -12,7 +12,20 @@
           "package_name": "com.blannonnetwork.loginwithfirebaseauth"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "773684026988-9uk7ml4edk390jhr563sh9v7g93lfv50.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.blannonnetwork.loginwithfirebaseauth",
+            "certificate_hash": "d8dc03c2fa010e232bf7714a9710d5fd69e65506"
+          }
+        },
+        {
+          "client_id": "773684026988-sntncvinksqg34q0196egdm05t8d583l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCPs2_m2wOMmiGzoi3mVOHjWtF6N20B5oo"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773684026988-sntncvinksqg34q0196egdm05t8d583l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

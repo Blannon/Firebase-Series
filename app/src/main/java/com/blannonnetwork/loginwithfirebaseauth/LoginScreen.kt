@@ -70,8 +70,10 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.times
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavHostController
 import com.dotlottie.dlplayer.Mode
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.Firebase
 import com.google.firebase.auth.auth
 import com.lottiefiles.dotlottie.core.compose.ui.DotLottieAnimation
@@ -88,6 +90,15 @@ fun LoginScreen(navController: NavHostController){
     val emailFocusRequester = remember { FocusRequester() }
     val passwordFocusRequester = remember { FocusRequester() }
     val focusManager = LocalFocusManager.current
+    val context = LocalContext.current
+
+    val googleSignInOptions = remember{
+        GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(context.getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+
+    }
 
     val infiniteTransition = rememberInfiniteTransition()
     val floatingOffset by infiniteTransition.animateFloat(
@@ -343,6 +354,18 @@ fun LoginScreen(navController: NavHostController){
 
             }
             Spacer(modifier = Modifier.height(8.dp))
+
+            AndroidView(
+                factory = { context ->
+                    LoginButton(context).apply {
+                        setSize(LoginButton.SIZE_WIDE)
+                        setOnClickListener {
+
+                        }
+                    }
+                },
+                modifier = Modifier.fillMaxWidth()
+            )
 
             TextButton(onClick = {
                 forgotPassword = true
